@@ -71,9 +71,6 @@ export default () => {
             <ColumnHeading>Quick Links</ColumnHeading>
             <LinkList>
               <LinkListItem>
-                <Link href="#">Blog</Link>
-              </LinkListItem>
-              <LinkListItem>
                 <Link href="#">FAQs</Link>
               </LinkListItem>
               <LinkListItem>

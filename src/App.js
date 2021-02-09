@@ -1,8 +1,11 @@
-import "tailwindcss/dist/base.css";
-import "styles/globalStyles.css";
-import React from "react";
-import { css } from "styled-components/macro"; //eslint-disable-line
+import 'tailwindcss/dist/base.css';
+import 'styles/globalStyles.css';
+import React from 'react';
+import { css } from 'styled-components/macro'; //eslint-disable-line
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
+import ComponentRenderer from 'ComponentRenderer.js';
+import AgencyLandingPage from 'demos/AgencyLandingPage.js';
 /*
  * This is the entry point component of this project. You can change the below exported default App component to any of
  * the prebuilt landing page components by uncommenting their import and export lines respectively.
@@ -53,10 +56,6 @@ import { css } from "styled-components/macro"; //eslint-disable-line
 // import Portfolio from "components/cards/PortfolioTwoCardsWithImage.js";
 // import TabGrid from "components/cards/TabCardGrid.js";
 
-// import Blog from "components/blogs/ThreeColSimpleWithImage.js";
-// import Blog from "components/blogs/ThreeColSimpleWithImageAndDashedBorder.js";
-// import Blog from "components/blogs/PopularAndRecentBlogPosts.js";
-// import Blog from "components/blogs/GridWithFeaturedPost.js";
 
 // import Testimonial from "components/testimonials/TwoColumnWithImage.js";
 // import Testimonial from "components/testimonials/TwoColumnWithImageAndProfilePictureReview.js";
@@ -85,7 +84,6 @@ import { css } from "styled-components/macro"; //eslint-disable-line
 /* Ready Made Pages (from demos folder) */
 // import EventLandingPage from "demos/EventLandingPage.js";
 // import HotelTravelLandingPage from "demos/HotelTravelLandingPage.js";
-// import AgencyLandingPage from "demos/AgencyLandingPage.js";
 // import SaaSProductLandingPage from "demos/SaaSProductLandingPage.js";
 // import RestaurantLandingPage from "demos/RestaurantLandingPage.js";
 // import ServiceLandingPage from "demos/ServiceLandingPage.js";
@@ -97,31 +95,27 @@ import { css } from "styled-components/macro"; //eslint-disable-line
 // import PricingPage from "pages/Pricing.js";
 // import AboutUsPage from "pages/AboutUs.js";
 // import ContactUsPage from "pages/ContactUs.js";
-// import BlogIndexPage from "pages/BlogIndex.js";
 // import TermsOfServicePage from "pages/TermsOfService.js";
 // import PrivacyPolicyPage from "pages/PrivacyPolicy.js";
 
-import ComponentRenderer from "ComponentRenderer.js";
-import MainLandingPage from "MainLandingPage.js";
-
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 export default function App() {
-  // return <AnimationRevealPage disabled></AnimationRevealPage>;
   return (
-    <Router>
-      <Switch>
-        <Route path="/components/:type/:subtype/:name">
-          <ComponentRenderer />
-        </Route>
-        <Route path="/components/:type/:name">
-          <ComponentRenderer />
-        </Route>
-        <Route path="/">
-          <MainLandingPage />
-        </Route>
-      </Switch>
-    </Router>
+    <div>
+      <Router>
+        <Switch>
+          <Route path="/components/:type/:subtype/:name">
+            <ComponentRenderer />
+          </Route>
+          <Route path="/components/:type/:name">
+            <ComponentRenderer />
+          </Route>
+          <Route path="/">
+          </Route>
+        </Switch>
+      </Router>
+      <AgencyLandingPage />
+    </div>
   );
 }
 
@@ -138,7 +132,6 @@ export default function App() {
 // export default PricingPage;
 // export default AboutUsPage;
 // export default ContactUsPage;
-// export default BlogIndexPage;
 // export default TermsOfServicePage;
 // export default PrivacyPolicyPage;
 

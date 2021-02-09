@@ -13,18 +13,6 @@ export default ({ url, background="black", className="video" }) => {
         height: 0
       }}
     >
-      <iframe
-        title="Embeded Video"
-        style={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          width: "100%",
-          height: "100%"
-        }}
-        src={url}
-        frameBorder="0"
-      />
     </div>
   );
 };
