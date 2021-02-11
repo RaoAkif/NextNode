@@ -6,21 +6,12 @@ import AgencyLandingPage from 'demos/AgencyLandingPage.js';
 
 import AgencyLandingPageImageSrc from 'images/demo/AgencyLandingPage.jpeg';
 
-import LoginPage from 'pages/Login.js';
-import SignupPage from 'pages/Signup.js';
-import PricingPage from 'pages/Pricing.js';
 import AboutUsPage from 'pages/AboutUs.js';
 import ContactUsPage from 'pages/ContactUs.js';
-import TermsOfServicePage from 'pages/TermsOfService.js';
-import PrivacyPolicyPage from 'pages/PrivacyPolicy.js';
 
-import LoginPageImageSrc from 'images/demo/LoginPage.jpeg';
-import SignupPageImageSrc from 'images/demo/SignupPage.jpeg';
-import PricingPageImageSrc from 'images/demo/PricingPage.jpeg';
+
 import AboutUsPageImageSrc from 'images/demo/AboutUsPage.jpeg';
 import ContactUsPageImageSrc from 'images/demo/ContactUsPage.jpeg';
-import TermsOfServicePageImageSrc from 'images/demo/TermsOfServicePage.jpeg';
-import PrivacyPolicyPageImageSrc from 'images/demo/PrivacyPolicyPage.jpeg';
 
 import BackgroundAsImageHero from 'components/hero/BackgroundAsImage.js';
 import IllustrationAndInputHero from 'components/hero/TwoColumnWithInput.js';
@@ -29,9 +20,7 @@ import FullWidthWithImageHero from 'components/hero/FullWidthWithImage.js';
 import BackgroundAsImageWithCenteredContentHero from 'components/hero/BackgroundAsImageWithCenteredContent.js';
 import IllustrationAndPrimaryBackgroundHero from 'components/hero/TwoColumnWithPrimaryBackground.js';
 
-import TwoPlansWithDurationSwitcherPricing from 'components/pricing/TwoPlansWithDurationSwitcher.js';
-import ThreePlansWithHalfPrimaryBackgroundPricing from 'components/pricing/ThreePlansWithHalfPrimaryBackground.js';
-import ThreePlansPricing from 'components/pricing/ThreePlans.js';
+
 
 import ThreeColWithSideImageFeatures from 'components/features/ThreeColWithSideImage.js';
 import TwoColWithButtonFeatures from 'components/features/TwoColWithButton.js';
@@ -88,23 +77,6 @@ export const components = {
   },
 
   innerPages: {
-    LoginPage: {
-      component: LoginPage,
-      imageSrc: LoginPageImageSrc,
-      scrollAnimationDisabled: true,
-      url: '/components/innerPages/LoginPage',
-    },
-    SignupPage: {
-      component: SignupPage,
-      url: `/components/innerPages/SignupPage`,
-      imageSrc: SignupPageImageSrc,
-      scrollAnimationDisabled: true,
-    },
-    PricingPage: {
-      component: PricingPage,
-      url: `/components/innerPages/PricingPage`,
-      imageSrc: PricingPageImageSrc,
-    },
     AboutUsPage: {
       component: AboutUsPage,
       url: `/components/innerPages/AboutUsPage`,
@@ -114,16 +86,6 @@ export const components = {
       component: ContactUsPage,
       url: `/components/innerPages/ContactUsPage`,
       imageSrc: ContactUsPageImageSrc,
-    },
-    TermsOfServicePage: {
-      component: TermsOfServicePage,
-      url: `/components/innerPages/TermsOfServicePage`,
-      imageSrc: TermsOfServicePageImageSrc,
-    },
-    PrivacyPolicyPage: {
-      component: PrivacyPolicyPage,
-      url: `/components/innerPages/PrivacyPolicyPage`,
-      imageSrc: PrivacyPolicyPageImageSrc,
     },
   },
 
@@ -163,26 +125,7 @@ export const components = {
         },
       },
     },
-    Pricing: {
-      type: 'Pricing Section',
-      elements: {
-        TwoPlansWithDurationSwitcher: {
-          name: 'Two Plans With Duration Switcher',
-          component: TwoPlansWithDurationSwitcherPricing,
-          url: '/components/blocks/Pricing/TwoPlansWithDurationSwitcher',
-        },
-        ThreePlansWithHalfPrimaryBackground: {
-          name: 'Three Plans With Primary Background at Top',
-          component: ThreePlansWithHalfPrimaryBackgroundPricing,
-          url: '/components/blocks/Pricing/ThreePlansWithHalfPrimaryBackground',
-        },
-        ThreePlans: {
-          name: 'Simple Three Plans',
-          component: ThreePlansPricing,
-          url: '/components/blocks/Pricing/ThreePlans',
-        },
-      },
-    },
+   
     Features: {
       type: 'Features Section',
       elements: {
@@ -319,26 +262,7 @@ export const components = {
       },
     },
 
-    FAQS: {
-      type: 'FAQs Section',
-      elements: {
-        SimpleWithSideImage: {
-          name: 'Simple With Side Image',
-          component: SimpleWithSideImageFAQS,
-          url: '/components/blocks/FAQS/SimpleWithSideImage',
-        },
-        SingleCol: {
-          name: 'Single Column',
-          component: SingleColFAQS,
-          url: '/components/blocks/FAQS/SingleCol',
-        },
-        TwoColumnPrimaryBackground: {
-          name: 'Two Column With Primary Background',
-          component: TwoColumnPrimaryBackgroundFAQS,
-          url: '/components/blocks/FAQS/TwoColumnPrimaryBackground',
-        },
-      },
-    },
+ 
 
     Form: {
       type: 'Forms Section',

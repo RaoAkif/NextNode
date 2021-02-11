@@ -56,7 +56,6 @@ import AgencyLandingPage from 'demos/AgencyLandingPage.js';
 // import Portfolio from "components/cards/PortfolioTwoCardsWithImage.js";
 // import TabGrid from "components/cards/TabCardGrid.js";
 
-
 // import Testimonial from "components/testimonials/TwoColumnWithImage.js";
 // import Testimonial from "components/testimonials/TwoColumnWithImageAndProfilePictureReview.js";
 // import Testimonial from "components/testimonials/TwoColumnWithImageAndRating.js";
@@ -98,11 +97,10 @@ import AgencyLandingPage from 'demos/AgencyLandingPage.js';
 // import TermsOfServicePage from "pages/TermsOfService.js";
 // import PrivacyPolicyPage from "pages/PrivacyPolicy.js";
 
-
 export default function App() {
   return (
     <div>
-      <Router>
+      {/* <Router>
         <Switch>
           <Route path="/components/:type/:subtype/:name">
             <ComponentRenderer />
@@ -110,11 +108,11 @@ export default function App() {
           <Route path="/components/:type/:name">
             <ComponentRenderer />
           </Route>
-          <Route path="/">
-          </Route>
+          <Route path="/"></Route>
         </Switch>
-      </Router>
-      <AgencyLandingPage />
+      </Router> */}
+      <AgencyLandingPage /> 
+
     </div>
   );
 }
